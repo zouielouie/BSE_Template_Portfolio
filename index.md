@@ -1,7 +1,9 @@
-# Bryan L Binary Blaster Game
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+# Bryan L Binary Blaster Game & Real Time Planet Tracking System
+My starter project was the Binary Blaster Game. It was mostly a solder focused project, where I needed to solder all the parts onto a circuit board. One problem I had was with the direction of certain parts, and needed to do diode tests to figure out the positive and negative side of the piece. In the end it turned out to be a really fun game!
 
-| **Engineer** | **School** | **Area of Interest** | **Grade** |
+My bigger project was the Real Time Planet Tracking System
+
+| **Bryan Louie** | **Mountain View High School** | **Aerospace Engineering** | **Senior** |
 |:--:|:--:|:--:|:--:|
 | FirstName LastInitialOnly | School Name | Electrical Engineering | Incoming Senior
 
