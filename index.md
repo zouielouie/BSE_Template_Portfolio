@@ -1,4 +1,4 @@
-# Bryan L Binary Blaster Game & Real Time Planet Tracking System
+# Binary Blaster Game & Real Time Planet Tracking System
 
 My bigger project was the Real Time Planet Tracking System
 
