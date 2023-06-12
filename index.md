@@ -1,5 +1,4 @@
 # Bryan L Binary Blaster Game & Real Time Planet Tracking System
-My starter project was the Binary Blaster Game. It was mostly a solder focused project, where I needed to solder all the parts onto a circuit board. One problem I had was with the direction of certain parts, and needed to do diode tests to figure out the positive and negative side of the piece. In the end it turned out to be a really fun game!
 
 My bigger project was the Real Time Planet Tracking System
 
@@ -11,12 +10,12 @@ My bigger project was the Real Time Planet Tracking System
 
 ![Headstone Image](logo.svg)
 
-# Starter Project
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+# Starter Project: Binary Blaster Game
+Before I started on my main project, I worked on my starter project, which was the Binary Blaster Game. It was mostly a solder focused project, where I needed to solder all the parts onto a circuit board. One problem I had was with the direction of certain parts, and needed to do diode tests to figure out the positive and negative side of the piece. In the end it turned out to be a really fun game!
+- Learned about polarization
+- Continued practice of soldering
+- Learned how to use the multimeter
+- Learned about diode tests and bias in circuits
   
 # Final Milestone
 For your final milestone, explain the outcome of your project. Key details to include are:
