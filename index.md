@@ -3,9 +3,9 @@ My starter project was the Binary Blaster Game. It was mostly a solder focused p
 
 My bigger project was the Real Time Planet Tracking System
 
-| **Bryan Louie** | **Mountain View High School** | **Aerospace Engineering** | **Senior** |
+| **Name** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| FirstName LastInitialOnly | School Name | Electrical Engineering | Incoming Senior
+| Bryan L | Mountain View High School | Aerospace Engineering | Incoming Senior
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
