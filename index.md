@@ -16,6 +16,8 @@ Before I started on my main project, I worked on my starter project, which was t
 - Continued practice of soldering
 - Learned how to use the multimeter
 - Learned about diode tests and bias in circuits
+- 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cKlvox5fjQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   
 # Final Milestone
 For your final milestone, explain the outcome of your project. Key details to include are:
