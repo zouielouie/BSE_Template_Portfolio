@@ -49,7 +49,10 @@ The Arduino Mega acts as the brains to my system, and stores all the code that g
 I developed a general understanding behind the math required to solve ascension and declination. I also got all of my hardware components working through connections and test code. 
 
 ### Challenges
-One challenge I had was with the servos. The servos only got 180 degrees and my top servo actually needs to go a whole 360 degrees (needs to be able to rotate its head to look anywhere in the night sky)
+One challenge I had was with the servos. The servos only got 180 degrees and my top servo actually needs to go a whole 360 degrees (needs to be able to rotate its head to look anywhere in the night sky). One way to combat this problem is to use 2 lasers (on opposite sides), however that will require some tinkering to create. 
+
+### Next Steps
+Work on the code that I will implement in all my calculations, solve any final hardware problems and figure out the double laser system. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CiB3LzFuGAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -76,7 +79,7 @@ One problem I had was with the direction of certain parts, and needed to do diod
 - Learned about diode tests and bias in circuits
 
 ### Next Steps
-Now I will begin on my intensive project
+Now I will begin on my intensive project. 
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cKlvox5fjQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 In the video above I demonstrate how to play my game as well as explain different parts of it. 
