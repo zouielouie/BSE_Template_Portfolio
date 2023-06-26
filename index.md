@@ -37,11 +37,11 @@ For your second milestone, explain what you've worked on since your previous mil
 My project involves a plethora of different parts, calculations and precise movements. Before working on the hardware I had to learn about the calculations necessary to get from the statistics of a planet to the degrees relative to the machine it has to "look". Then I had to work with the following hardware components which provide the variables necessary to do the calculations. 
 
 Components: 
-  - Arduino Mega
-  - Breadboard
-  - GPS Module
-  - Servos and Laser Pointer Machine
-  - Gyroscope
+  - Arduino Mega - the "brains", controls system with code and connects everything with ports
+  - Breadboard - diverts power from the power source to all the modules
+  - GPS Module - Finds longitude and latitude, and time
+  - Servos and Laser Pointer Machine - rotates 360 degrees and can look up and down. points a laser into the sky to "track" the planets
+  - Gyroscope - recievevs and gives data about in which direction it is looking. 
 
 The Arduino Mega acts as the brains to my system, and stores all the code that goes towards everything. It connects its power to the breadboard which distributes power to the rest of the components. The GPS Module and Gyroscope connect to the arduino (to get and give information) and the breadboard (for power) through various ports. The Servos connect to the both the arduino and the breaboard however since it only recieves information (doesn't give information back) there is 3 wires (power, ground and recieve data). 
 
@@ -61,12 +61,12 @@ Work on the code that I will implement in all my calculations, solve any final h
 Before I started on my main project, I worked on my starter project, which was the Binary Blaster Game. It was mostly a solder focused project, where I needed to solder all the parts onto a circuit board. 
 
 Components: 
-- Resistors and Capacitors
-- Batteries
-- Switches and LED Buttons
-- LED Lights
-- Buzzer
-- Microcontroller
+- Resistors and Capacitors - Control the flow of electricity through the build
+- Batteries - Provide power
+- Switches and LED Buttons - Allow or not allow electricity through the circuit
+- LED Lights - Display numbers for the user to visually understand
+- Buzzer - Creates noise
+- Microcontroller - The "brains", controls all components
 
 The microcontroller acts as the brains as the whole system. The switches allow current from the batteries to flow or not, being an on/off switch, to both the buzzer and the system. If the current flows through (meaning it is on), connection flows to the rest of the system, and the buttons (when pressed) signals to the microcontroller, which signals to the LED lights to display.
 
@@ -84,8 +84,8 @@ Now I will begin on my intensive project.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cKlvox5fjQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 In the video above I demonstrate how to play my game as well as explain different parts of it. 
 
-# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+<!---# Schematics 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. --->
 
 <!---# Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
