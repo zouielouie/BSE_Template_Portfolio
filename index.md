@@ -21,27 +21,39 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>--->
 
-<!---# Second Milestone
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+# Second Milestone
+### Summary
+Using the GPS Module, a couple of servos, and a laser I create my project to track mars accurately. Using data about a planet's daily movement, information about it's orbit and the time and numbers of day since the J2000 epoch(jan 0, 2000), I am able to find the Azimuth and Altitude (which is the number degrees right from north, and the number of degrees up from the horizon). Then I use the Azimuth and Altitude and communicate that to the servos and lasers which actually point a dot at where the planet is (relative to me). 
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+New Components: 
+  - Lasers - These are literal laser pointers, and since they don't require a lot of power they can be directly connected to the digital port for power (as opposed to a digital port, a VCC power port, and a ground port).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>--->
+At the moment I have my lasers on 24/7, but in the future I will have it toggle on/off after it has found the planet. Also, right now I just have the laser mounted on the Pan Tilt system with tape so I will need to cad and 3d print a laser mount. 
+
+### Progress
+This milestone more or less completes the project to the most basic level-being able to point at a planet in real time. With my calculations I can accurately find mars whenever I need to. 
+
+### Challenges
+I had lots of challenges and learning experiences leading up to this milestone. 
+To begin, my GPS Module just wouldn't work. It turns out it wasn't an issue with the GPS, but rather an issue with the ports. On the Arduino Mega (unlike the Uno), it only communicates via RX and TX ports and not digital ports. 
+Another challenge was the servos, again. Since they only go 180 degrees, it would not be able turn around to all locations. However, there is a way around it, where the tilt goes beyond 90 degrees, and goes "upside down". 
+Finally the gyroscope, which I did not end up using was a challenge. I wanted it to self adjust, however later realized that it was not necessary to the project. However I learned a lot from the data the gyroscope had to offer, and about rotational matrices. 
+
+### Next Steps
+For my 3rd milestone and my modifications I want to add a button that allows me to switch between planets, so that I am able to track multiple ones. I also will CAD a new mount for the lasers. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xUnogn_SHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # First Milestone
 ### Summary
 My project involves a plethora of different parts, calculations and precise movements. Before working on the hardware I had to learn about the calculations necessary to get from the statistics of a planet to the degrees relative to the machine it has to "look". Then I had to work with the following hardware components which provide the variables necessary to do the calculations. 
 
 Components: 
-  - Arduino Mega - the "brains", controls system with code and connects everything with ports
+  - Arduino Mega - the "brains", controls system with code and connects everything with ports. Has digital ports to distribute and recieve data. 
   - Breadboard - diverts power from the power source to all the modules
-  - GPS Module - Finds longitude and latitude, and time
-  - Servos and Laser Pointer Machine - rotates 360 degrees and can look up and down. points a laser into the sky to "track" the planets
-  - Gyroscope - recievevs and gives data about in which direction it is looking. 
+  - GPS Module - Finds longitude and latitude, and time. Requires a RX/TX (recieves and transmits data), a VCC power and Ground port
+  - Servos and Pan Tilt System - rotates 360 degrees and can look up and down. points a laser into the sky to "track" the planets. Servos use Vcc and Ground port and recieves data. 
+  - Gyroscope - recieves and gives data via RX and TX equivalent ports about in which direction it is facing, if it is accelerating and if it is tilting. 
 
 The Arduino Mega acts as the brains to my system, and stores all the code that goes towards everything. It connects its power to the breadboard which distributes power to the rest of the components. The GPS Module and Gyroscope connect to the arduino (to get and give information) and the breadboard (for power) through various ports. The Servos connect to the both the arduino and the breaboard however since it only recieves information (doesn't give information back) there is 3 wires (power, ground and recieve data). 
 
