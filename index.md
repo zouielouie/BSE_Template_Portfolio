@@ -122,7 +122,6 @@ Servo myservoEl;
 
 /*
    Ports are hooked up to 19 RX1 and 18 TX1, which are Serial1 ports. 
-   I hat codng
 
    Pin Setup: 
    GPS: RX1, TX1
