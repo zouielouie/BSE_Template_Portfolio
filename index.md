@@ -10,16 +10,24 @@ My intensive project was the Real Time Planet Tracking System
 
 ![Headstone Image](Bryan-Headshot.png)
   
-<!---# Final Milestone
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+# Final Milestone
+### Summary
+After completing the project to the most basic design I added a few things. The primary one is a new 3d print design for my robot, which includes a shell, gears, and a laser mount. Additionally, I added a button that allows you to choose between different planets. With this new design I can choose any planet in the solar system, and with the gears it can rotate a full 360 degrees. 
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+New Components: 
+3d Prints - Using Onshape, I CADded a new box that holds the arduino and breadboard underneath, the servos and gears above to be able to rotate 360 degrees. The laser mount on top is connected to the servo and "looks" with it. 
+Button - Allows me to choose between different planets. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>--->
+### Progress
+This is more of a finalizing part, as both of these can be considered modifications. Both of these add a new touch to my project. 
+
+### Challenges
+My main challenge came with CAD, since I hadn't CAD much before and I was new to it. It was mainly just learning something completely new and then applying it to my project. At first I was CADding very efficiently, making unnecessary edits to my sketches. When I later needed to work with it it was difficult to use, and I ended up reCadding my whole project. In the end I completed my project and learned how to CAD which I believe will help me a lot in engineering. 
+
+### Next Steps 
+Although this project is complete, it could use some additional modifiations and changes. One of which is adding the gyroscope (which has a magnetometer). At the moment I need to align the box with north to calibrate, and then I can use the laser to point. With the magnetometer, which acts as a compass, it can "look" instead of having to align itself. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Second Milestone
 ### Summary
