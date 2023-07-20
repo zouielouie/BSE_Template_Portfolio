@@ -108,23 +108,253 @@ In the video above I demonstrate how to play my game as well as explain differen
 Here are the schematics to my Onshape CAD. You can view the onshape [here](https://cad.onshape.com/documents/811f844c0036201591b66542/w/7ca7b2cf806acc914a8ccb5e/e/a0914b747509e6813e3df3ae?renderMode=0&uiState=64b96080502aca089d4ef958). 
 
 As for wiring, here is my wiring schematic. 
-[Schematic] (schematic.png)
+[Schematic](schematic.png)
 
-<!---# Code
+# Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
+#include <TinyGPSPlus.h>
+#include <SoftwareSerial.h>
+#include <Servo.h>
+Servo myservoAz; // create servo object to control a servo
+Servo myservoEl;
+
+/*
+   Ports are hooked up to 19 RX1 and 18 TX1, which are Serial1 ports. 
+   I hat codng
+
+   Pin Setup: 
+   GPS: RX1, TX1
+   Button: 4
+   Laser: 13
+   Pan Servo: 8
+   Tilt Servo: 9
+   )
+
+*/
+static const int RXPin = 31, TXPin = 33;
+static const uint32_t GPSBaud = 9600;
+
+//boolean for button
+int pressed = 0;
+
+// The TinyGPSPlus object
+TinyGPSPlus gps;
+
+// The serial connection to the GPS device
+SoftwareSerial ss(RXPin, TXPin);
+
+//date and time, location
+double year, month, day, hour, minute;
+double lat, lng;
+
+int planet = 4; //it is set to 0 rn
+//elements of august 16, 2013
+const double i[10] = {radians(0.0), radians(7.0052), radians(3.3949), radians(0.0), radians(1.8496), radians(1.3033), radians(2.4869), radians(0.7728), radians(1.7692), radians(17.1695)};//inclination (degrees)
+const double o[10] = {radians(0.0), radians(48.493), radians(76.804), radians(0.0), radians(49.668), radians(100.629), radians(113.732), radians(73.989), radians(131.946), radians(110.469)};//longitude of ascending node (degrees)
+const double p[10] = {radians(0.0), radians(77.669), radians(131.99), radians(103.147), radians(336.322), radians(14.556), radians(91.500),  radians(169.602), radians(6.152), radians(223.486)};//longitude of perihelion (degrees)
+const double a[10] = {0.0, 0.387098, 0.723327, 1.0000, 1.523762, 5.20245, 9.52450, 19.1882, 29.9987, 39.2766};//distance (AU)
+const double n[10] = {radians(0.0), radians(4.09235), radians(1.60215), radians(0.985611), radians(0.523998), radians(0.083099), radians(0.033551), radians(0.011733), radians(0.006002), radians(0.004006)};//daily motion (degrees)
+const double e[10] = {0.0, 0.205645 , 0.006769, 0.016679, 0.093346, 0.048892, 0.055724, 0.047874, 0.009816, 0.246211};//eccentricity
+const double L[10] = {radians(0.0), radians(93.8725), radians(233.5729), radians(324.5489), radians(82.9625), radians(87.9728), radians(216.6279), radians(11.9756), radians(335.0233), radians(258.8717)};//mean longitude (degrees)
+//nothing(0(), mercury(1), venus(2), earth(3), mars(4), jupiter(5), saturn(6), uranus(7), neptune(8), pluto(9)
+
+double w2=p[3]-o[3]; 
+
+double array[3];
+
+
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
-  Serial.println("Hello World!");
+  Serial1.begin(9600);
+
+  //servos
+  myservoAz.attach(8); //Attach the pins //pan is 8, tilt is 9
+  myservoEl.attach(9);
+  myservoAz.write(90);   //initialize the servo to go to its zero
+  myservoEl.write(90); 
+  
+  //lasers
+  pinMode(13, OUTPUT);  
+
+  //button
+  pinMode(4, INPUT_PULLUP);
 }
+
 
 void loop() {
   // put your main code here, to run repeatedly:
+  lat = gps.location.lat();
+  lng = gps.location.lng();
+
+  year = gps.date.year();
+  month = gps.date.month();
+  day = gps.date.day();
+  hour = gps.time.hour();
+  minute = gps.time.minute();
+
+  if(digitalRead(4)==1){
+    pressed = 0;
+  }
+  if(digitalRead(4)==0){
+    if(pressed == 0){
+      planet = planet + 1;
+      if(planet == 10){
+      planet = 0;
+      
+      }
+    }
+    pressed = 1;
+  }
+  Serial.print("Planet No: ");
+  Serial.println(planet);
+
+  if (!gps.date.isValid()){
+    Serial.println(F("********** "));
+  }
+  else{
+    char sz[32];
+    sprintf(sz, "%02d/%02d/%02d ", gps.date.month(), gps.date.day(), gps.date.year());
+  
+    calculate(&*array);
+    Serial.print("Alpha: ");
+    Serial.println(array[0]);
+    Serial.print("Delta: ");
+    Serial.println(array[1]);
+    Serial.print("Distance: ");
+    Serial.println(array[2]);
+    Serial.print("Latitude: ");
+    Serial.println(gps.location.lat());
+    Serial.print("Longitude: ");
+    Serial.println(gps.location.lng());
+    Serial.print("Date(UTC): ");
+    Serial.println(sz);
+  }
+  if (!gps.time.isValid()){
+    Serial.print(F("******** "));
+  }
+  else{
+    char sz[32];
+    sprintf(sz, "%02d:%02d:%02d ", gps.time.hour(), gps.time.minute(), gps.time.second());
+    Serial.print("Time(UTC): ");
+    Serial.println(sz);
+  }
+  smartDelay(1000);
+
 
 }
-```--->
+
+
+static void smartDelay(unsigned long ms){
+  unsigned long start = millis();
+  do {
+    while (Serial1.available())
+      gps.encode(Serial1.read());
+  } while (millis() - start < ms);
+}
+
+
+void calculate(double *array){
+
+  double w=p[planet]-o[planet]; //argument of perihelion (radians) 
+
+  double days = 8399.5+181; //right now it is setup to july of 2023, too lazy to add code cuz its not that deep. this is the num of days since august 16 2013 (this is the only thing needed to update every time)
+  days = days + day; //add the day of the month
+  days = days + ((hour+(minute/60))/24); 
+  days=days-4975.5;
+  //days=928;//temporary for checking
+
+  //mean anomaly
+  double m=days*n[planet]+L[planet]-p[planet];
+  while(m>360){
+    m=m-360;
+  }
+  //mea anomaly of earth
+  double mE=days*n[3]+L[3]-p[3];
+  while(mE>360){
+    mE=mE-360;
+  }
+
+  //true anomaly
+  double v = m + (2 * e[planet] - 0.25 * pow(e[planet],3) + 5/96 * pow(e[planet],5)) * sin(m) + (1.25 * pow(e[planet],2) - 11/24 * pow(e[planet],4)) * sin(2*m) + (13/12 * pow(e[planet],3) - 43/64 * pow(e[planet],5)) * sin(3*m) + 103/96 * pow(e[planet],4) * sin(4*m) + 1097/960 * pow(e[planet],5) * sin(5*m);
+  double vE = mE + (2 * e[3] - 0.25 * pow(e[3],3) + 5/96 * pow(e[3],5)) * sin(mE) + (1.25 * pow(e[3],2) - 11/24 * pow(e[3],4)) * sin(2*mE) + (13/12 * pow(e[3],3) - 43/64 * pow(e[3],5)) * sin(3*mE) + 103/96 * pow(e[3],4) * sin(4*mE) + 1097/960 * pow(e[3],5) * sin(5*mE);
+
+  //radius vector
+  double r=a[planet]*(1-pow(e[planet],2))/(1+e[planet]*cos(v));
+  double rE=a[3]*(1-pow(e[3],2))/(1+e[3]*cos(vE));
+
+  //heliocentric coordinates of planet
+  double x = r * (cos(o[planet]) * cos(v+w) - sin(o[planet]) * sin(v+w) * cos(i[planet]));
+  double y = r * (sin(o[planet]) * cos(v+w) + cos(o[planet]) * sin(v+w) * cos(i[planet]));
+  double z = r * (sin(v + w) * sin(i[planet]));
+
+  //heliocentric coordinates of earth
+  double xE = rE * cos(vE + p[3]);
+  double yE = rE * sin(vE + p[3]);
+  double zE = 0;
+
+  //geocentric ecliptic coordinates of the planet 
+  double xg = x - xE;
+  double yg = y - yE;
+  double zg = z - zE;
+
+  //geocentric equatorial coordinates of the planet
+  double ec=radians(23.439292);
+  double Xq = xg;
+  double Yq = yg * cos(ec) - zg * sin(ec);
+  double Zq = yg * sin(ec) + zg * cos(ec);
+
+  //converting rectangular coordinates to right ascension and declination
+  //alpha = right ascension, delta = declination
+  double alpha = atan(Yq/Xq);
+  alpha = degrees(alpha);
+  if (Xq<0){
+      alpha = alpha + 180;
+
+  }
+  if (Xq>0 and Yq<0){
+        alpha = alpha + 360;
+  }
+
+  alpha = alpha/15;
+  double delta = atan(Zq/sqrt(pow(Xq,2) + pow(Yq, 2)));
+  delta = degrees(delta);
+  double distance = sqrt(pow(Xq,2) + pow(Yq, 2) + pow(Zq, 2));
+
+  double d = 8399.5+181; //right now it is setup to july of 2023, too lazy to add code cuz its not that deep. this is the num of days since august 16 2013 (this is the only thing needed to update every time)
+  d = d + day; //add the day of the month
+
+  double LST = (100.46 + 0.985647 * d + lng + 15 * (hour + minute / 60) + 360) - (((int)((100.46 + 0.985647 * d + lng + 15 * (hour + minute / 60) + 360)/360))*360);
+  while(LST>360){
+    LST=LST-360;
+  }
+  double HA = (LST - alpha*15 + 360) - ((int)((LST - alpha*15 + 360)/360))*360;
+  double xx = cos(HA * (M_PI / 180)) * cos(delta * (M_PI / 180));
+  double yy = sin(HA * (M_PI / 180)) *cos(delta * (M_PI / 180));
+  double zz = sin(delta * (M_PI / 180));
+  double xhor = xx * cos((90 - lat) * (M_PI / 180)) - zz *sin((90 - lat) * (M_PI / 180));
+  double yhor = yy;
+  double zhor = xx * sin((90 - lat) * (M_PI / 180)) + zz *cos((90 - lat) * (M_PI / 180));
+  double az = atan2(yhor, xhor) * (180 / M_PI) + 180;
+  double alt = asin(zhor) * (180 / M_PI);
+  Serial.print("Azimuth: ");
+  Serial.println(az);
+  Serial.print("Altitude: ");
+  Serial.println(alt);
+
+  double pan = az/2; //its kind of backwards. essentially if 0 degrees is 0 degrees compass (direct north), then 45 degrees is 315, 90 is 270, etc...
+  double tilt = alt+90;
+
+  myservoAz.write(pan);
+  myservoEl.write(tilt);
+  digitalWrite(13, HIGH);
+
+  array[0] = alpha;
+  array[1] = delta;
+  array[2] = distance;
+}
+```
 
 <!---# Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
