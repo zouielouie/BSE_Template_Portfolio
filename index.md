@@ -104,8 +104,11 @@ Now I will begin on my intensive project.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cKlvox5fjQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 In the video above I demonstrate how to play my game as well as explain different parts of it. 
 
-<!---# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. --->
+# Schematics 
+Here are the schematics to my Onshape CAD. You can view the onshape [here](https://cad.onshape.com/documents/811f844c0036201591b66542/w/7ca7b2cf806acc914a8ccb5e/e/a0914b747509e6813e3df3ae?renderMode=0&uiState=64b96080502aca089d4ef958). 
+
+As for wiring, here is my wiring schematic. 
+[Schematic] (schematic.png)
 
 <!---# Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
