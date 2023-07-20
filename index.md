@@ -11,6 +11,8 @@ My intensive project was the Real Time Planet Tracking System
 ![Headstone Image](Bryan-Headshot.png)
   
 # Final Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### Summary
 After completing the project to the most basic design I added a few things. The primary one is a new 3d print design for my robot, which includes a shell, gears, and a laser mount. Additionally, I added a button that allows you to choose between different planets. With this new design I can choose any planet in the solar system, and with the gears it can rotate a full 360 degrees. 
 
@@ -27,9 +29,9 @@ My main challenge came with CAD, since I hadn't CAD much before and I was new to
 ### Next Steps 
 Although this project is complete, it could use some additional modifiations and changes. One of which is adding the gyroscope (which has a magnetometer). At the moment I need to align the box with north to calibrate, and then I can use the laser to point. With the magnetometer, which acts as a compass, it can "look" instead of having to align itself. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 # Second Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xUnogn_SHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### Summary
 Using the GPS Module, a couple of servos, and a laser I create my project to track mars accurately. Using data about a planet's daily movement, information about it's orbit and the time and numbers of day since the J2000 epoch(jan 0, 2000), I am able to find the Azimuth and Altitude (which is the number degrees right from north, and the number of degrees up from the horizon). Then I use the Azimuth and Altitude and communicate that to the servos and lasers which actually point a dot at where the planet is (relative to me). 
 
@@ -50,9 +52,9 @@ Finally the gyroscope, which I did not end up using was a challenge. I wanted it
 ### Next Steps
 For my 3rd milestone and my modifications I want to add a button that allows me to switch between planets, so that I am able to track multiple ones. I also will CAD a new mount for the lasers. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xUnogn_SHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 # First Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CiB3LzFuGAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### Summary
 My project involves a plethora of different parts, calculations and precise movements. Before working on the hardware I had to learn about the calculations necessary to get from the statistics of a planet to the degrees relative to the machine it has to "look". Then I had to work with the following hardware components which provide the variables necessary to do the calculations. 
 
@@ -74,9 +76,10 @@ One challenge I had was with the servos. The servos only got 180 degrees and my 
 ### Next Steps
 Work on the code that I will implement in all my calculations, solve any final hardware problems and figure out the double laser system. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CiB3LzFuGAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 # Starter Project: Binary Blaster Game
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cKlvox5fjQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+In the video above I demonstrate how to play my game as well as explain different parts of it. 
 ### Summary
 Before I started on my main project, I worked on my starter project, which was the Binary Blaster Game. It was mostly a solder focused project, where I needed to solder all the parts onto a circuit board. 
 
@@ -100,9 +103,6 @@ One problem I had was with the direction of certain parts, and needed to do diod
 
 ### Next Steps
 Now I will begin on my intensive project. 
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cKlvox5fjQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-In the video above I demonstrate how to play my game as well as explain different parts of it. 
 
 # Schematics 
 Here are the schematics to my Onshape CAD. You can view the onshape [here](https://cad.onshape.com/documents/811f844c0036201591b66542/w/7ca7b2cf806acc914a8ccb5e/e/a0914b747509e6813e3df3ae?renderMode=0&uiState=64b96080502aca089d4ef958). 
@@ -111,9 +111,6 @@ As for wiring, here is my wiring schematic.
 [Schematic](schematic.png)
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
-
 | **Part** | **Note** | **Price** | **Link** |
 | Arduino Mega | Acts as the brains of the system, stores code, connects ports, calls actions.  | $55.00 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://a.co/d/82DlYAx)"> Link </a> |
 | GT-U7 GPS Module | Gives information about location and time, necessary for calculations | $18.99 | <a href="https://www.amazon.com/Navigation-Positioning-Sensitivity-Consumption-High-Precision/dp/B08MZ2CBP7/ref=sr_1_3?crid=EUNF72IZZWV6&keywords=gt-u7&qid=1689876233&sprefix=gt-u%2Caps%2C606&sr=8-3)"> Link </a> |
@@ -124,8 +121,6 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
-
 ```c++
 #include <TinyGPSPlus.h>
 #include <SoftwareSerial.h>
