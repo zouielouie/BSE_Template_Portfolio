@@ -371,6 +371,8 @@ Don't forget to place the link of where to buy each component inside the quotati
 |:--:|:--:|:--:|:--:|
 | Laser Diode | Is the pointer for the tracking system | $6.79 (for 10) | <a href="https://www.amazon.com/HiLetgo-10pcs-650nm-Diode-Laser/dp/B071FT9HSV/ref=sr_1_3?crid=2Q5BLK784C55&keywords=laser+diode&qid=1689876609&sprefix=l%2Caps%2C1486&sr=8-3"> Link </a> |
 |:--:|:--:|:--:|:--:|
+| Button | What is used to switch between planets | $5.99 (for 120) | <a href="https://a.co/d/dSWykzh"> Link </a> |
+|:--:|:--:|:--:|:--:|
 
 <!---# Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
