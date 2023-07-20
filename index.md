@@ -1,6 +1,6 @@
 # Real Time Planet Tracking System
 
-My intensive project was the Real Time Planet Tracking System
+My intensive project was the Real Time Planet Tracking System. The project involves a GPS, 2 servos, a laser diode and a lot of calculations, and is able to point at different planets in the sky. 
 
 | **Name** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -8,7 +8,8 @@ My intensive project was the Real Time Planet Tracking System
 
 <!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**--->
 
-![Headstone Image](Bryan-Headshot.png)
+<img src="Bryan-Headshot.png"  width="450" height="600">
+
   
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
