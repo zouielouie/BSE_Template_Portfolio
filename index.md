@@ -112,8 +112,10 @@ As for wiring, here is my wiring schematic.
 [Schematic](schematic.png)
 
 # Bill of Materials
+
 | **Part** | **Note** | **Price** | **Link** |
-| Arduino Mega | Acts as the brains of the system, stores code, connects ports, calls actions.  | $55.00 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://a.co/d/82DlYAx)"> Link </a> |
+|---|---|---|---|
+| Arduino Mega | Acts as the brains of the system, stores code, connects ports, calls actions.  | $55.00 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://a.co/d/82DlYAx)"> Link </a> |
 | GT-U7 GPS Module | Gives information about location and time, necessary for calculations | $18.99 | <a href="https://www.amazon.com/Navigation-Positioning-Sensitivity-Consumption-High-Precision/dp/B08MZ2CBP7/ref=sr_1_3?crid=EUNF72IZZWV6&keywords=gt-u7&qid=1689876233&sprefix=gt-u%2Caps%2C606&sr=8-3)"> Link </a> |
 | Micro Servo (2) | Motors, turn and rotate to view planet.  | $7.29 (for 2) | <a href="https://www.amazon.com/Sipytoph-Helicopter-Airplane-Walking-Control/dp/B09185SC1W/ref=sr_1_8?crid=EG34UOQG1ZTB&keywords=micro+servo+sg90&qid=1689876515&sprefix=micro+servo+sg%2Caps%2C410&sr=8-8"> Link </a> |
 | Laser Diode | Is the pointer for the tracking system | $6.79 (for 10) | <a href="https://www.amazon.com/HiLetgo-10pcs-650nm-Diode-Laser/dp/B071FT9HSV/ref=sr_1_3?crid=2Q5BLK784C55&keywords=laser+diode&qid=1689876609&sprefix=l%2Caps%2C1486&sr=8-3"> Link </a> |
