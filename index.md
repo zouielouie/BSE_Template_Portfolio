@@ -9,6 +9,7 @@ My intensive project was the Real Time Planet Tracking System. The project invol
 <!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**--->
 
 <img src="Bryan-Headshot.png"  width="450" height="600">
+<img src="Bryan-Project.png"  width="450" height="600">
 
   
 # Final Milestone
